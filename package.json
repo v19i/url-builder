@@ -1,6 +1,6 @@
 {
   "name": "@franz899/url-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easily compose urls",
   "main": "main.js",
   "engines": {
@@ -12,8 +12,8 @@
     "test:watch": "npm run test -- --watch",
     "cleanup": "./cleanup.sh",
     "lint": "eslint",
-    "ci:test": "npm run cleanup && npm ci && npm run lint && npm run test && npm run cleanup",
-    "publish": "npm run ci:test && npm publish"
+    "ci:test": "npm run cleanup && npm ci && npm run lint && npm run test",
+    "prepublishOnly": "npm run ci:test"
   },
   "repository": {
     "type": "git",
