@@ -43,7 +43,7 @@ class Params {
     return "?" + params.join("&");
   }
 
-  add(key, value) {
+  set(key, value) {
     this.#params[key] = value;
   }
 
