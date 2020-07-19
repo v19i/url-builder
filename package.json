@@ -1,6 +1,6 @@
 {
   "name": "@franz899/url-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easily compose urls",
   "main": "main.js",
   "engines": {
@@ -30,11 +30,11 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
-    "@types/mocha": "^7.0.2",
+    "@types/mocha": "^8.0",
     "chai": "^4.2.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "mocha": "^8.0.1",
     "prettier": "^2.0.5"
   },
