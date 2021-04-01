@@ -1,9 +1,7 @@
 class URLBuilder {
-  baseURL: string;
   search: Params;
 
-  constructor(baseURL: string) {
-    this.baseURL = baseURL;
+  constructor(private baseURL: string) {
     this.search = new Params();
   }
 
@@ -16,33 +14,29 @@ class URLBuilder {
 export default URLBuilder;
 
 class Params {
-  params: {
-    [key: string]: string | number | boolean;
-  };
+  private params: Map<string, string | number | boolean>;
 
   constructor() {
-    this.params = {};
+    this.params = new Map();
   }
 
   format() {
-    const keys = Object.keys(this.params);
-    if (keys.length === 0) {
+    if (this.params.size === 0) {
       return "";
     }
 
-    const params = keys.map((key, i) => {
-      const value = encodeURIComponent(this.params[key]);
-      return `${key}=${value}`;
-    });
-
+    const params = [];
+    for (const [key, value] of this.params) {
+      params.push(`${key}=${encodeURIComponent(value)}`);
+    }
     return "?" + params.join("&");
   }
 
   set(key: string, value: string | number | boolean) {
-    this.params[key] = value;
+    this.params.set(key, value);
   }
 
-  del(key: string) {
-    delete this.params[key];
+  delete(key: string) {
+    this.params.delete(key);
   }
 }

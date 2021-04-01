@@ -45,7 +45,7 @@ describe("URLBuilder", () => {
       const b = new URLBuilder("https://a.valid.url/");
       b.search.set("key", "value");
       b.search.set("key2", "value2");
-      b.search.del("key2");
+      b.search.delete("key2");
 
       b.URL.should.equal("https://a.valid.url/?key=value");
     });

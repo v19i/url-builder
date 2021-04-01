@@ -20,5 +20,5 @@ builder.URL; // -> https://a.valid.url/with/a/long/path?key=value
 
 Remove a search param:
 ```javascript
-builder.search.del("key");
+builder.search.delete("key");
 ```

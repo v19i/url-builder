@@ -1,6 +1,6 @@
 {
   "name": "@franz899/url-builder",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Easily compose URLs",
   "main": "./lib/index.js",
   "type": "module",
