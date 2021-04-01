@@ -1,8 +1,8 @@
 {
   "name": "@franz899/url-builder",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easily compose URLs",
-  "main": "./src/index.ts",
+  "main": "./lib/index.js",
   "type": "module",
   "engines": {
     "node": "^14.0",
