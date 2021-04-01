@@ -1,12 +1,30 @@
 {
   "name": "@franz899/url-builder",
   "version": "1.0.3",
-  "description": "Easily compose urls",
-  "main": "main.js",
+  "description": "Easily compose URLs",
+  "main": "./src/index.ts",
   "type": "module",
   "engines": {
     "node": "^14.0",
     "npm": "^7.0"
+  },
+  "directories": {
+    "lib": "./lib",
+    "src": "./src",
+    "test": "./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franz899/url-builder.git"
+  },
+  "author": "Valerio Francescangeli <valerio@hey.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franz899/url-builder/issues"
+  },
+  "homepage": "https://github.com/franz899/url-builder#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "tsc --build ./tsconfig.json",
@@ -16,24 +34,6 @@
     "lint": "eslint",
     "ci:test": "npm run cleanup && npm ci && npm run lint && npm run test",
     "prepublishOnly": "npm run ci:test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/franz899/url-builder.git"
-  },
-  "directories": {
-    "lib": "./lib",
-    "src": "./src",
-    "test": "./src"
-  },
-  "author": "Valerio Francescangeli <franz899@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/franz899/url-builder/issues"
-  },
-  "homepage": "https://github.com/franz899/url-builder#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
