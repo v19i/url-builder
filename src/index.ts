@@ -1,9 +1,8 @@
 class URLBuilder {
-  constructor(baseURL) {
-    if (isNotAString(baseURL)) {
-      throw new Error("baseURL is requried");
-    }
+  baseURL: string;
+  search: Params;
 
+  constructor(baseURL: string) {
     this.baseURL = baseURL;
     this.search = new Params();
   }
@@ -14,13 +13,13 @@ class URLBuilder {
   }
 }
 
-module.exports = URLBuilder;
-
-function isNotAString(x) {
-  return typeof x !== "string" || x.length === 0;
-}
+export default URLBuilder;
 
 class Params {
+  params: {
+    [key: string]: string | number | boolean;
+  };
+
   constructor() {
     this.params = {};
   }
@@ -39,11 +38,11 @@ class Params {
     return "?" + params.join("&");
   }
 
-  set(key, value) {
+  set(key: string, value: string | number | boolean) {
     this.params[key] = value;
   }
 
-  del(key) {
+  del(key: string) {
     delete this.params[key];
   }
 }
