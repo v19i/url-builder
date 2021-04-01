@@ -1,6 +1,6 @@
 {
   "name": "@franz899/url-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easily compose URLs",
   "main": "./src/index.ts",
   "type": "module",
